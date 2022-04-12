@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans&display=swap");
+
 :root {
-  --heading-font: 'Helvitica Neue', Helvetica, Arial, sans-serif;
+  --heading-font: 'Libre Baskerville', serif;
   --body-font: 'Opens Sans', sans-serif;
 }
 
@@ -41,6 +43,44 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
 }
 
+.col.col-1 {
+  flex-basis: 8.33%;
+}
+
+.col.col-2 {
+  flex-basis: 16.66%;
+}
+
+.col.col-3 {
+  flex-basis: 25%;
+}
+
+.col.col-4 {
+  flex-basis: 33.33%;
+}
+
+@media screen and (max-width: 1440px) {
+  .col.col-1 {
+    flex-basis: 4.16%;
+  }
+  .col.col-2 {
+    flex-basis: 8.33%;
+  }
+  .col.col-4 {
+    flex-basis: 16.66%;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    margin: 1rem 0 1rem 0;
+  }
+}
+
+
 /* Page */
 
 .description {
@@ -71,3 +111,80 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
   }
 }
+
+/* Start image styles */
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.img-rounded {
+  border-radius: var(--border-radius);
+}
+/* End image styles */
+
+/* Start list styles */
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding-bottom: 0.5rem;
+}
+/* End list styles */
+
+/* Start nav styles */
+
+.nav {
+  width: 75%;
+  padding-top: 5ch;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: var(--font-heading);
+}
+
+.nav-list {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+.link:hover {
+    color: var(--primary-accent-color);
+}
+
+.li {
+  padding: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav .active {
+  color: var(--color-primary);
+}
+
+@media screen and (max-width: 920px) {
+  .nav {
+    width: 75%;
+    flex-direction: column;
+  }
+}
+
+/* End nav styles */
