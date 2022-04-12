@@ -1,34 +1,44 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Death from './pages/Death';
+import Home from './pages/Home';
+import Neptune from './pages/Neptune';
+import Diane from './pages/Diane';
 
-import { Stage } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import { Suspense, useEffect, useRef } from 'react'
-import Death from './models/Death'
-import Neptune from './models/Neptune'
-import ModelWrapper from './components/ModelWrapper'
-import Loader from './components/Loader'
-import { useState } from 'react'
+function App() {
 
-export default function Viewer() {
-  const [currentModel, setCurrentModel] = useState(null)
-
-  const model = (<Death rotation={[0, 0, 0]} position={[0, 0, 0]} />);
-  const model2 = (<Neptune rotation={[0, 0, 0]} position={[0, 0, 0]} />);
-
-  useEffect(() => {
-    setCurrentModel(model)
-  }, [])
-
-  const ref = useRef()
+  const pages = [
+    {
+      path: '/',
+      component: <Home />
+    },
+    {
+      path: '/death',
+      component: <Death />
+    },
+    {
+      path: '/neptune',
+      component: <Neptune />
+    },
+    {
+      path: '/diane',
+      component: <Diane />
+    }
+  ]
 
   return (
-    <Canvas className="canvas" shadows dpr={[1, 2]} camera={{ fov: 30 }}>
-      <Suspense fallback={<Loader />}>
-        <Stage controls={ref} preset="rembrandt" intensity={0}>
-          <ModelWrapper>
-            {currentModel}
-          </ModelWrapper>
-        </Stage>
-      </Suspense>
-    </Canvas>
-  )
+    <>
+      <BrowserRouter>
+        <Routes>
+          {
+            pages.map(page => (
+              <Route key={page.path} path={page.path} element={page.component} />
+            ))
+          }
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
+
+export default App;

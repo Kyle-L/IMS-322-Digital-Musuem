@@ -1,3 +1,8 @@
+:root {
+  --heading-font: 'Helvitica Neue', Helvetica, Arial, sans-serif;
+  --body-font: 'Opens Sans', sans-serif;
+}
+
 
 html,
 body,
@@ -7,13 +12,49 @@ body,
   overflow: hidden;
   height: 100vh;
   width: 100vw;
+
+  font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
 }
 
 .canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Flex Layout */
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+/* Page */
+
+.description {
+  padding-right: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .description {
+    padding: 1rem;
+  }
+}
+
+/* Utilities */
+
+.h-100 {
+  height: 100%;
 }
