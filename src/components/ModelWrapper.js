@@ -6,56 +6,31 @@ source: https://sketchfab.com/3d-models/diane-iv-louvre-museum-low-definition-84
 title: Diane IV - Louvre Museum (Low Definition)
 */
 
-import { useFrame } from "@react-three/fiber";
-import React, { useRef } from "react";
-import lerp from "lerp";
+import { OrbitControls } from "@react-three/drei";
+import { useRef } from "react";
 
-export default function ModelWrapper(props) {
-    const group = useRef();
+function ModelWrapper({ children, orbitOffset }) {
+  const group = useRef();
 
-    useFrame(({ clock, mouse }) => {
-        group.current.rotation.y = lerp(group.current.rotation.y, mouse.x * (Math.PI / 5), 0.005)
-    })
-
-    return (
-        <group ref={group} dispose={null}>
-            {props.children}
-            <Lights />
-        </group>
-    );
+  return (
+    <>
+      <group ref={group} dispose={null}>
+        {children}
+      </group>
+      <OrbitControls
+        enableDamping={true}
+        dampingFactor={0.1}
+        enableZoom={false}
+        enablePan={false}
+        autoRotate={true}
+        autoRotateSpeed={0.5}
+        target={orbitOffset}
+        minPolarAngle={Math.PI / 2}
+        maxPolarAngle={Math.PI / 2}
+        cursor={true}
+      />
+    </>
+  );
 }
 
-function Lights() {
-    const groupL = useRef()
-    const groupR = useRef()
-    const front = useRef()
-  
-    useFrame(({ clock, mouse }) => {
-      groupL.current.rotation.y = lerp(groupL.current.rotation.y, -mouse.x * (Math.PI / 2), 0.1)
-      groupR.current.rotation.y = lerp(groupR.current.rotation.y, mouse.x * (Math.PI / 2), 0.1)
-      front.current.position.x = lerp(front.current.position.x, mouse.x * 12, 0.4)
-      front.current.position.y = lerp(front.current.position.y, 7 + mouse.y * 4, 0.4)
-    })
-  
-    return (
-      <>
-        <group ref={groupL}>
-          <pointLight position={[0, 7, -25]} distance={15} intensity={0} />
-        </group>
-        <group ref={groupR}>
-          <pointLight position={[0, 7, -25]} distance={15} intensity={0} />
-        </group>
-        <spotLight
-          castShadow
-          ref={front}
-          penumbra={1}
-          angle={Math.PI / 3}
-          position={[0, 0, 7]}
-          distance={11}
-          intensity={8}
-          shadow-mapSize-width={2048}
-          shadow-mapSize-height={2048}
-        />
-      </>
-    )
-  }
+export default ModelWrapper;

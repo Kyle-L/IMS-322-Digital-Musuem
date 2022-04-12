@@ -1,9 +1,9 @@
 import Layout from '../components/Layout'
-import Diane from '../models/Diane'
+import Model from '../components/models/Diane'
 
 function Page () {
   return (
-    <Layout model={<Diane />}>
+    <Layout model={<Model />} modelOffset={[0, 6, 0]}>
       <h1>Diane</h1>
     </Layout>
   )

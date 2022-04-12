@@ -1,9 +1,11 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Death from './pages/Death';
 import Home from './pages/Home';
 import Neptune from './pages/Neptune';
 import Diane from './pages/Diane';
+import Augustus from './pages/Augustus';
+import ThreeGraces from './pages/ThreeGraces';
+import './style.css';
 
 function App() {
 
@@ -23,6 +25,14 @@ function App() {
     {
       path: '/diane',
       component: <Diane />
+    },
+    {
+      path: '/augustus',
+      component: <Augustus />
+    },
+    {
+      path: '/three-graces',
+      component: <ThreeGraces />
     }
   ]
 

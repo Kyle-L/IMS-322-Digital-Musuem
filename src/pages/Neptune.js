@@ -1,9 +1,9 @@
 import Layout from '../components/Layout'
-import Neptune from '../models/Neptune'
+import Model from '../components/models/Neptune'
 
 function Page () {
   return (
-    <Layout model={<Neptune />}>
+    <Layout model={<Model />} modelOffset={[0, 6, 0]}>
       <h1>Neptune</h1>
     </Layout>
   )
