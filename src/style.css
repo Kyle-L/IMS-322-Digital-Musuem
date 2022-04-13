@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Quicksand:wght@400&display=swap");
 
 :root {
-  --heading-font: 'Libre Baskerville', serif;
-  --body-font: 'Opens Sans', sans-serif;
+  --heading-font: 'Quicksand', sans-serif;
+  --body-font: 'Quicksand', sans-serif;
 
   --primary-background-color: #fafafa;
 
@@ -46,7 +46,7 @@ a:hover {
 
 button {
   border-radius: var(--border-radius);
-  padding: 16px;
+  padding: 1ch;
   background-color: var(--primary-accent-color);
   color: var(--primary-background-color);
   border: none;
@@ -135,6 +135,14 @@ button:hover {
 
 .h-100 {
   height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.accent {
+  color: var(--primary-accent-color);
 }
 
 /* Start image styles */
@@ -254,3 +262,24 @@ ul li {
 }
 
 /* End modal */
+
+.loader-container {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border: 0.5rem solid var(--primary-background-color);
+  border-top: 0.5rem solid var(--primary-accent-color);
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: border-box;
+}

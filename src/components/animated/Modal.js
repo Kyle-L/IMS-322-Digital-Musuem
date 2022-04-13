@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion"
 
-function ModalButton({ children, modalVisible, modalSetVisible }) {
+function Modal({ children, modalVisible, modalSetVisible }) {
     return (
         modalVisible && <AnimatePresence>
             <motion.div
@@ -11,10 +11,10 @@ function ModalButton({ children, modalVisible, modalSetVisible }) {
                 exit={{ opacity: 0 }}
                 onClick={() => modalSetVisible(false)}
             >
-                <motion.div 
-                initial={{ opacity: 0, y: -50 }}
+                <motion.div
+                initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 50 }}
+                exit={{ opacity: 0, y: 100 }}
                 className="modal-content">
                     {children}
                     <button className="close-button" onClick={() => modalSetVisible(false)}>
@@ -26,4 +26,4 @@ function ModalButton({ children, modalVisible, modalSetVisible }) {
     );
 }
 
-export default ModalButton;
+export default Modal;
