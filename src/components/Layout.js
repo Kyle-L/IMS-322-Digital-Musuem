@@ -28,7 +28,9 @@ export default function Viewer({ model, children, modelOffset, fov = 40 }) {
                     </Fade>
                 </div>
                 <div className="col description">
-                    {children}
+                    <Fade active={true}>
+                        {children}
+                    </Fade>
                 </div>
             </div>
         </>
