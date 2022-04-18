@@ -13,10 +13,10 @@ export default function Viewer({ model, children, modelOffset, fov = 40 }) {
     return (
         <>
             <Navbar />
-            <div className="row h-100">
-                <div className="col">
+            <div className="row">
+                <div className="col canvas-container">
                     <Fade active={progress == 100} includeLoader={true}>
-                        <Canvas className="canvas" shadows dpr={[1, 2]} camera={{ fov: fov, }}>
+                        <Canvas className="canvas" shadows camera={{ fov: fov, }}>
                             <Suspense>
                                 <Stage controls={ref} preset="rembrandt" intensity={0}>
                                     <ModelWrapper orbitOffset={modelOffset}>

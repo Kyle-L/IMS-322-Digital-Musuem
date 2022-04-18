@@ -27,7 +27,6 @@ function ModelWrapper({ children, orbitOffset }) {
         target={orbitOffset}
         minPolarAngle={Math.PI / 2}
         maxPolarAngle={Math.PI / 2}
-        cursor={true}
       />
     </>
   );
