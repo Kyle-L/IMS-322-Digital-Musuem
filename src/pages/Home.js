@@ -1,11 +1,12 @@
 import Navbar from "components/Navbar";
+import Layout from "components/Layout";
 
 function Home () {
   return (
-    <>
-      <Navbar />
-      <h1>Home</h1>
-    </>
+    <Layout>
+      <h1>Welcome to the Digital Museum</h1>
+      <p></p>
+    </Layout>
   )
 }
 

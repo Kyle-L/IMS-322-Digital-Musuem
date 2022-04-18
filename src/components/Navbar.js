@@ -5,7 +5,7 @@ function Navbar() {
         <>
         <header>
             <nav className="nav">
-                <h1 className="navHeading">Digital Museum</h1>
+                <h1 className="navHeading"><NavLink to="/">Digital Museum</NavLink></h1>
                 <ul className="navList">
                     <li className="li">
                         <NavLink className="link" to="/augustus">

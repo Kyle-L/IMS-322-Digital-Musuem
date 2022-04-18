@@ -1,6 +1,6 @@
 import Modal from 'components/animated/SculptureModal';
 import React from 'react';
-import Layout from '../components/Layout'
+import Layout from '../components/SculptureLayout'
 import Model from '../components/models/ThreeGraces'
 
 function Page() {

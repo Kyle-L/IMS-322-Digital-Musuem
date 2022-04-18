@@ -1,4 +1,4 @@
-import Layout from '../components/Layout'
+import Layout from '../components/SculptureLayout'
 import Model from '../components/models/Augustus'
 
 function Page() {

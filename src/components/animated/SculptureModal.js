@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import Modal from './Modal';
 
+/**
+ * A modal that includes a layout for a scultpure's information.
+ */
 function ModelModal({ name, date, origin, artist, held }) {
     const [modalVisible, modalSetVisible] = useState(false);
 

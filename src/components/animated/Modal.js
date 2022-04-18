@@ -1,6 +1,10 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion"
 
+/**
+ * A simple modal with a modalVisible and a modalSetVisible prop to control the visibility through 
+ * the useState hook.
+ */
 function Modal({ children, modalVisible, modalSetVisible }) {
     return (
         modalVisible && <AnimatePresence>

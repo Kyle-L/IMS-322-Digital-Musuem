@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Quicksand:wght@400&display=swap");
 
 :root {
-  --heading-font: 'Quicksand', sans-serif;
+  --heading-font: 'libre baskerville', serif;
   --body-font: 'Quicksand', sans-serif;
 
   --primary-background-color: #fafafa;
@@ -20,11 +20,9 @@ body,
 #root {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   height: 100vh;
   width: 100vw;
   font-family: var(--body-font);
-  transition: all 0.3 ease-in-out;
 }
 
 h1,
@@ -38,6 +36,8 @@ h6 {
 
 a {
   color: var(--primary-foreground-color);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
@@ -94,44 +94,18 @@ button:hover {
   flex-basis: 33.33%;
 }
 
-@media screen and (max-width: 1440px) {
-  .col.col-1 {
-    flex-basis: 4.16%;
-  }
-
-  .col.col-2 {
-    flex-basis: 8.33%;
-  }
-
-  .col.col-4 {
-    flex-basis: 16.66%;
-  }
-}
-
-@media screen and (max-width: 920px) {
-  .row {
-    flex-direction: column;
-  }
-
-  .col {
-    margin: 1rem 0 1rem 0;
-  }
-}
-
-
 /* Page */
 
 .description {
   padding-right: 3rem;
 }
 
-@media screen and (max-width: 768px) {
-  .description {
-    padding: 1rem;
-  }
-}
-
 /* Utilities */
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
 
 .h-100 {
   height: 100%;
@@ -211,15 +185,8 @@ ul li {
   vertical-align: middle;
 }
 
-.nav .active {
+.nav .link.active {
   color: var(--primary-accent-color);
-}
-
-@media screen and (max-width: 920px) {
-  .nav {
-    width: 75%;
-    flex-direction: column;
-  }
 }
 
 /* End nav styles */
@@ -282,4 +249,42 @@ ul li {
   border-radius: 50%;
   position: absolute;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 1440px) {
+  .col.col-1 {
+    flex-basis: 4.16%;
+  }
+
+  .col.col-2 {
+    flex-basis: 8.33%;
+  }
+
+  .col.col-4 {
+    flex-basis: 16.66%;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .nav {
+    width: 75%;
+    flex-direction: column;
+  }
+
+  .description {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  
+  .container {
+    width: 75%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    margin: 1rem 0 1rem 0;
+  }
 }

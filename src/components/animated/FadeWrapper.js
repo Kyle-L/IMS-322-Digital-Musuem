@@ -2,7 +2,10 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import LoadingIcon from "./LoadingIcon"
 
-export default function MyComponent({ children, active = true, includeLoader = false }) {
+/**
+ * A wrapper component that fades everything wrapped. Includes optional loading icon.
+ */
+export default function Fade({ children, active = true, includeLoader = false }) {
     const [isActive, setIsActive] = useState(false)
 
     useEffect(() => {

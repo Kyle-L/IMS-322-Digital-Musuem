@@ -1,5 +1,5 @@
 import Modal from 'components/animated/SculptureModal';
-import Layout from '../components/Layout';
+import Layout from '../components/SculptureLayout';
 import Model from '../components/models/Neptune';
 
 function Page() {
