@@ -1,53 +1,46 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Death from './pages/Death';
 import Home from './pages/Home';
-import Neptune from './pages/Neptune';
-import Diane from './pages/Diane';
-import Augustus from './pages/Augustus';
-import ThreeGraces from './pages/ThreeGraces';
+import {
+  Augustus, Diane, Death, Neptune, ThreeGraces,
+} from './pages';
 import './style.css';
+import Navbar from './components/Navbar';
 
 function App() {
-
   const pages = [
     {
       path: '/',
-      component: <Home />
+      component: <Home />,
     },
     {
       path: '/death',
-      component: <Death />
+      component: <Death />,
     },
     {
       path: '/neptune',
-      component: <Neptune />
+      component: <Neptune />,
     },
     {
       path: '/diane',
-      component: <Diane />
+      component: <Diane />,
     },
     {
       path: '/augustus',
-      component: <Augustus />
+      component: <Augustus />,
     },
     {
       path: '/three-graces',
-      component: <ThreeGraces />
-    }
-  ]
+      component: <ThreeGraces />,
+    },
+  ];
 
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          {
-            pages.map(page => (
-              <Route key={page.path} path={page.path} element={page.component} />
-            ))
-          }
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        {pages.map((page) => (<Route key={page.path} path={page.path} element={page.component} />))}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

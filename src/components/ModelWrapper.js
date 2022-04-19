@@ -6,8 +6,9 @@ source: https://sketchfab.com/3d-models/diane-iv-louvre-museum-low-definition-84
 title: Diane IV - Louvre Museum (Low Definition)
 */
 
-import { OrbitControls } from "@react-three/drei";
-import { useRef } from "react";
+import { OrbitControls } from '@react-three/drei';
+import PropTypes from "prop-types";
+import { useRef } from 'react';
 
 function ModelWrapper({ children, orbitOffset }) {
   const group = useRef();
@@ -18,11 +19,11 @@ function ModelWrapper({ children, orbitOffset }) {
         {children}
       </group>
       <OrbitControls
-        enableDamping={true}
+        enableDamping
         dampingFactor={0.1}
         enableZoom={false}
         enablePan={false}
-        autoRotate={true}
+        autoRotate
         autoRotateSpeed={0.5}
         target={orbitOffset}
         minPolarAngle={Math.PI / 2}
@@ -30,6 +31,11 @@ function ModelWrapper({ children, orbitOffset }) {
       />
     </>
   );
+}
+
+ModelWrapper.propTypes = {
+  children: PropTypes.any,
+  orbitOffset: PropTypes.any
 }
 
 export default ModelWrapper;

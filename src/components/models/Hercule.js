@@ -6,13 +6,13 @@ source: https://sketchfab.com/3d-models/hercule-f0b0158e3fc04f99927d8ac934589de1
 title: Hercule
 */
 
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
-import hercule from "./binary/hercule.glb";
+import { useGLTF } from '@react-three/drei';
+import React, { useRef } from 'react';
+import hercule from './binary/hercule.glb';
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF(hercule);
+  const { nodes } = useGLTF(hercule);
   return (
     <group ref={group} {...props} dispose={null}>
       <group position={[0.1, -12.32, 10.85]} rotation={[-2.94, 0.05, -0.01]}>
@@ -45,4 +45,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/hercule.glb");
+useGLTF.preload('/hercule.glb');

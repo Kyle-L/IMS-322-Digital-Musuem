@@ -6,13 +6,13 @@ source: https://sketchfab.com/3d-models/neptune-louvre-museum-e091d1ff1d2b44fd88
 title: Neptune - Louvre Museum
 */
 
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
-import neptune from "./binary/neptune.glb";
+import { useGLTF } from '@react-three/drei';
+import React, { useRef } from 'react';
+import neptune from './binary/neptune.glb';
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF(neptune);
+  const { nodes } = useGLTF(neptune);
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 2.4]}>
@@ -83,4 +83,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/scene.glb");
+useGLTF.preload('/scene.glb');

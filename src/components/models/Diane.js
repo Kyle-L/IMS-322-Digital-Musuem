@@ -6,9 +6,9 @@ source: https://sketchfab.com/3d-models/diane-iv-louvre-museum-low-definition-84
 title: Diane IV - Louvre Museum (Low Definition)
 */
 
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
-import diane from "./binary/diane.glb";
+import { useGLTF } from '@react-three/drei';
+import React, { useRef } from 'react';
+import diane from './binary/diane.glb';
 
 export default function Model(props) {
   const group = useRef();
@@ -22,11 +22,11 @@ export default function Model(props) {
             receiveShadow
             geometry={nodes.Object_3.geometry}
             material={materials.lambert6SG}
-          ></mesh>
+          />
         </group>
       </group>
     </group>
   );
 }
 
-useGLTF.preload("/diane.glb");
+useGLTF.preload('/diane.glb');

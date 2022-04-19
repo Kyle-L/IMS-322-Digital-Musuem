@@ -1,33 +1,43 @@
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from 'framer-motion';
+import PropTypes from "prop-types";
+import React from 'react';
 
 /**
- * A simple modal with a modalVisible and a modalSetVisible prop to control the visibility through 
+ * A simple modal with a modalVisible and a modalSetVisible prop to control the visibility through
  * the useState hook.
  */
 function Modal({ children, modalVisible, modalSetVisible }) {
-    return (
-        modalVisible && <AnimatePresence>
-            <motion.div
-                className="modal-background"
-                initial={{ opacity: 0, }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => modalSetVisible(false)}
-            >
-                <motion.div
-                initial={{ opacity: 0, y: -100 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 100 }}
-                className="modal-content">
-                    {children}
-                    <button className="close-button" onClick={() => modalSetVisible(false)}>
-                        Close
-                    </button>
-                </motion.div>
-            </motion.div>
-        </AnimatePresence>
-    );
+  return (
+    modalVisible && (
+    <AnimatePresence>
+      <motion.div
+        className="modal-background"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => modalSetVisible(false)}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 100 }}
+          className="modal-content"
+        >
+          {children}
+          <button className="close-button" onClick={() => modalSetVisible(false)}>
+            Close
+          </button>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+    )
+  );
+}
+
+Modal.propTypes = {
+  children: PropTypes.any,
+  modalSetVisible: PropTypes.func,
+  modalVisible: PropTypes.any
 }
 
 export default Modal;

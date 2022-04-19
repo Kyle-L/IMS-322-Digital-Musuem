@@ -21,8 +21,6 @@ body,
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  min-width: 100vw;
-  max-width: 100vw;
   font-family: var(--body-font);
 }
 
@@ -35,14 +33,17 @@ h6 {
   font-family: var(--heading-font);
 }
 
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
 a {
-  color: var(--primary-foreground-color);
+  color: var(--primary-accent-color);
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
 }
 
 a:hover {
-  color: var(--primary-accent-color);
+  color: var(--secondary-accent-color);
 }
 
 button {
@@ -81,11 +82,6 @@ button:hover {
 
 .canvas {
   min-height: min(100vh, 100vw);
-  min-width: min(100vh, 100vw);
-}
-
-.description {
-  padding-right: 3rem;
 }
 
 /* Utilities */
@@ -93,6 +89,19 @@ button:hover {
 .container {
   width: 75%;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .h-100 {
@@ -141,19 +150,30 @@ ul li {
   align-items: center;
 }
 
-.nav-heading {
-  font-size: 3rem;
+.nav .heading {
+  font-size: 2rem;
   font-weight: bold;
-  font-family: var(--font-heading);
+  font-family: var(--heading-font);
+  color: var(--primary-foreground-color);
+  display: flex;
+  align-items: center;
 }
 
-.nav-list {
+.nav .heading .img {
+  display: inline-block;
+  width: 3rem;
+  padding: 0.5rem;
+}
+
+.nav .list {
   list-style-type: none;
   text-align: center;
   padding: 0;
 }
 
-.link {
+.nav a {
+  color: var(--primary-foreground-color);
+  stroke: var(--primary-foreground-color);
   cursor: pointer;
   text-decoration: none;
   font-size: 1rem;
@@ -162,9 +182,18 @@ ul li {
   text-decoration: none;
 }
 
-.link:hover {
+.nav a:hover {
   color: var(--primary-accent-color);
+  stroke: var(--primary-accent-color);
 }
+/* End nav styles */
+
+/* Start footer styles */
+.footer {
+  width: 100%;
+  text-align: center;
+}
+/* End footer styles */
 
 .li {
   padding: 1rem;
@@ -243,10 +272,6 @@ ul li {
   .description {
     padding-right: 3rem;
     padding-left: 3rem;
-  }
-  
-  .container {
-    width: 75%;
   }
 
   .row {

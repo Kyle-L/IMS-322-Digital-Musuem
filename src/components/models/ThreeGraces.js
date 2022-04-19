@@ -6,13 +6,13 @@ source: https://sketchfab.com/3d-models/the-three-graces-437574a871ca4e56be5944d
 title: The Three Graces
 */
 
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
-import graces from "./binary/three-graces.glb";
+import { useGLTF } from '@react-three/drei';
+import React, { useRef } from 'react';
+import graces from './binary/three-graces.glb';
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF(graces);
+  const { nodes } = useGLTF(graces);
   return (
     <group ref={group} {...props} dispose={null}>
       <group position={[-3.94, -20.05, 9.07]} rotation={[-0.04, -0.65, -3.13]}>
@@ -47,4 +47,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/three-graces.glb");
+useGLTF.preload('/three-graces.glb');

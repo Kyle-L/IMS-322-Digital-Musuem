@@ -1,12 +1,12 @@
-import Layout from '../components/SculptureLayout'
-import Model from '../components/models/Diane'
+import SculptureLayout from '../layouts/SculptureLayout';
+import Model from '../components/models/Diane';
 
-function Page () {
+function Page() {
   return (
-    <Layout model={<Model />} modelOffset={[0, 6, 0]}>
+    <SculptureLayout title="Diane" model={<Model />} modelOffset={[0, 6, 0]}>
       <h1>Diane</h1>
-    </Layout>
-  )
+    </SculptureLayout>
+  );
 }
 
 export default Page;

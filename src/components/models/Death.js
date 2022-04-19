@@ -6,18 +6,18 @@ source: https://sketchfab.com/3d-models/the-death-and-the-mother-df7714104de44ad
 title: The death and the mother
 */
 
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
-import death from "./binary/death.glb";
+import { useGLTF } from '@react-three/drei';
+import React, { useRef } from 'react';
+import death from './binary/death.glb';
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF(death);
+  const { nodes } = useGLTF(death);
   return (
     <group ref={group} {...props} dispose={null}>
       <group
         position={[-0, 0, -0.7]}
-        rotation={[-0.04, -2.5, Math.PI  ]}
+        rotation={[-0.04, -2.5, Math.PI]}
         scale={[0.3, 0.3, 0.3]}
       >
         <mesh
@@ -49,4 +49,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/death.glb");
+useGLTF.preload('/death.glb');

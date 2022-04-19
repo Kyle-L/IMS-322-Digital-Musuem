@@ -6,13 +6,13 @@ source: https://sketchfab.com/3d-models/the-emperor-augustus-d958f8c6de0c4fd8bc5
 title: The Emperor Augustus
 */
 
-import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF } from '@react-three/drei';
+import React, { useRef } from 'react';
 import augustus from './binary/augustus.glb';
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF(augustus);
+  const { nodes } = useGLTF(augustus);
   return (
     <group ref={group} {...props} dispose={null}>
       <group position={[-7.3, -0.55, -7.3]} rotation={[0, -0.06, -1.55]}>
@@ -39,4 +39,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload("/augustus.glb");
+useGLTF.preload('/augustus.glb');
