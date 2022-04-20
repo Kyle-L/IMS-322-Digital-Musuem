@@ -112,6 +112,10 @@ button:hover {
   width: 100%;
 }
 
+.p-2 {
+  padding: 2ch;
+}
+
 .accent {
   color: var(--primary-accent-color);
 }

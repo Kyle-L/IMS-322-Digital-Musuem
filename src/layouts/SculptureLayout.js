@@ -7,24 +7,26 @@ import { Suspense, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 
-const initial = {
-  opacity: 0,
-  x: '-2rem',
-}
-
-const animate = {
-  opacity: 1,
-  x: 0,
-}
-
-const transition = {
-duration: 1,
-ease: 'easeInOut',
-}
 export default function Viewer({ title, model, descriptionElems, modelOffset, fov = 40 }) {
   const { progress } = useProgress();
-
   const ref = useRef();
+
+  const delayRate = 0.35;
+
+  const initial = {
+    opacity: 0,
+    x: '-2rem',
+  }
+
+  const animate = {
+    opacity: 1,
+    x: 0,
+  }
+
+  const transition = {
+    duration: 1,
+    ease: 'easeInOut',
+  }
 
   return (
     <>
@@ -46,10 +48,13 @@ export default function Viewer({ title, model, descriptionElems, modelOffset, fo
               </Canvas>
             </FadeWrapper>
           </div>
-          <div className='col'>
-            <FadeWrapper active>
-              {descriptionElems.map((elem, i) => (<motion.div key={i} initial={initial} animate={animate} transition={{delay: (i + 1) * 0.35, ...transition}}>{elem}</motion.div>))}
-            </FadeWrapper>
+          <div className='col p-2'>
+            {descriptionElems.map((elem, i) => (
+              <motion.div key={i} initial={initial} animate={animate} transition={{ delay: (i + 1) * delayRate, ...transition }}>
+                {elem}
+                </motion.div>
+              ))
+            }
           </div>
         </div>
       </div>

@@ -6,26 +6,27 @@ import SculptureLayout from '../layouts/SculptureLayout';
 function Page() {
 
   const elems = [
-    (<h1 key={0}>Death</h1>),
-    (<SculptureModal key={1} name="Neptune" artist="Antoine Coysevox" date="1703 - 1705 (signing)" held="Louvre Museum in Paris, France" heldLink="https://collections.louvre.fr/en/" moreInfo='https://collections.louvre.fr/en/ark:/53355/cl010094811' origin="Marlay, France" />),
+    (<h1 key={0}>Death and the Mother</h1>),
+    (<SculptureModal key={1} name="Death and the Mother" artist="Niels Hansen Jacobsen" date="1892" held="Danish National Gallery in Copenhagen, Denmark" heldLink="https://www.smk.dk/en/" moreInfo='https://en.wikipedia.org/wiki/Death_and_the_Mother' origin="Paris, France" />),
     (<p key={2}>
-      This marble sculpture of Neptune was carved by the french artist Antoine Coysevox. Neptune (Latin: Neptūnus) was the god of freshwater and the sea in
-      Roman religion. He is the counterpart of the Greek god Poseidon. In the Greek-influenced tradition,
-      Neptune was the brother of Jupiter andPluto; the brothers presided over the realms of Heaven,
-      the earthly world, and the Underworld. Salacia was his consort.
+      Death and the Mother is a sculpture created by the Danish sculptor Niels Hansen Jacobsen.
+      Inspired by Hans Christian Andersen&apos;s tale <i>The Story of a Mother</i>, it depicts a Grim Reaper figure, in a dynamic pose,
+      carrying a scythe, striding over a mother with a dead child crouching on the ground. Jacobsen created the model in 1892
+      shortly after arriving in Paris, France where he lived until 1902.
     </p>),
     (<p key={3}>
-        Depictions of Neptune in Roman mosaics, especially those of North Africa, are influenced by Hellenistic conventions.
-        Neptune was likely associated with fresh water springs before the sea. Like Poseidon, Neptune was worshipped by the
-        Romans also as a god of horses, under the name Neptunus Equester, a patron of horse-racing.
+      The model was first exhibited at the Société Nationale des Beaux-Arts in Paris where it was well received.
+      The next year it was exhibited at Charlottenborg and in 1899 Hansen Jacobsen gave the model to
+      the Danish National Gallery. The model has resided in Denmark at the Danish National Gallery since.
     </p>),
     (<p key={4}>
-      The real sculpture currently reside in the Louvre Museum, Department of Sculptures from the Middle Ages, the Renaissance and Modern Times in Paris, France.
+      However, while the original plaster model is in the holdings of the Danish National Gallery, two bronze castings are located
+      outside St. Peter&apos;s Church in Copenhagen and Vejen Art Museum.
     </p>),
   ]
 
   return (
-    <SculptureLayout title="Neptune" model={<Model />} modelOffset={[0, 2, 0]} fov={40} descriptionElems={elems} />
+    <SculptureLayout title="Death and the Mother" model={<Model />} modelOffset={[0, 2, 0]} fov={40} descriptionElems={elems} />
   );
 }
 

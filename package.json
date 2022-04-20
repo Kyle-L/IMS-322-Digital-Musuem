@@ -22,7 +22,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx src/",
-    "lint-fix": "eslint --ext .js,.jsx src/ --fix"
+    "lint-fix": "eslint --ext .js,.jsx src/ --fix",
+    "deploy": "sh scripts/deploy.sh"
   },
   "browserslist": [
     ">0.2%",
