@@ -241,6 +241,26 @@ ul li {
 }
 /* End modal */
 
+/* Start tooltip */
+.tooltip-background {
+  background-color: var(--primary-accent-color);
+  color: var(--primary-background-color);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  position: absolute;
+  z-index: 102;
+  display: none;
+}
+
+.tooltip-content {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  position: absolute;
+  z-index: 102;
+  display: none;
+}
+
 .loader-container {
   position: relative;
   width: 100%;

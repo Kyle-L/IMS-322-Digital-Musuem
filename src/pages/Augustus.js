@@ -1,14 +1,31 @@
-import SculptureLayout from '../layouts/SculptureLayout';
 import Model from '../components/models/Augustus';
+import React from 'react';
+import SculptureModal from '../components/animated/SculptureModal';
+import SculptureLayout from '../layouts/SculptureLayout';
 
 function Page() {
+
+  const elems = [
+    (<h1 key={0}>Augustus</h1>),
+    (<SculptureModal key={1} name="Diane" artist="Antoine Coysevox" date="1703 - 1705 (signing)" held="Louvre Museum in Paris, France" heldLink="https://collections.louvre.fr/en/" moreInfo='https://collections.louvre.fr/en/ark:/53355/cl010094811' origin="Marlay, France" />),
+    (<p key={2}>
+      This marble sculpture of Neptune was carved by the french artist Antoine Coysevox. Neptune (Latin: Neptūnus) was the god of freshwater and the sea in
+      Roman religion. He is the counterpart of the Greek god Poseidon. In the Greek-influenced tradition,
+      Neptune was the brother of Jupiter andPluto; the brothers presided over the realms of Heaven,
+      the earthly world, and the Underworld. Salacia was his consort.
+    </p>),
+    (<p key={3}>
+        Depictions of Neptune in Roman mosaics, especially those of North Africa, are influenced by Hellenistic conventions.
+        Neptune was likely associated with fresh water springs before the sea. Like Poseidon, Neptune was worshipped by the
+        Romans also as a god of horses, under the name Neptunus Equester, a patron of horse-racing.
+    </p>),
+    (<p key={4}>
+      The real sculpture currently reside in the Louvre Museum, Department of Sculptures from the Middle Ages, the Renaissance and Modern Times in Paris, France.
+    </p>),
+  ]
+
   return (
-    <>
-      <SculptureLayout title="Augustus" model={<Model />} modelOffset={[0, 4, 0]}>
-        <h1>Augustus</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum eros id leo convallis, nec ultricies lorem blandit. Aenean luctus commodo mattis. Fusce sodales erat in urna feugiat ultrices. Maecenas congue ut urna eu ornare. Praesent efficitur porttitor orci nec fermentum. Cras at pharetra ligula, vel dapibus libero. Vivamus feugiat, urna vitae tempor semper, elit est interdum sem, quis scelerisque lacus mi non leo. Morbi ut lacus sit amet lorem vulputate ornare nec id massa. Cras non augue purus. Quisque quis ullamcorper nunc. Vestibulum sapien nisl, cursus quis massa sodales, ornare maximus eros. Nam interdum, massa tempus fringilla suscipit, purus arcu condimentum lorem, ac rhoncus nisl nibh pretium risus. In et suscipit diam, nec iaculis nisi. Pellentesque justo diam, vestibulum quis consequat eu, vehicula eu lectus. Nulla et elit finibus, aliquet odio ac, lobortis nulla.</p>
-      </SculptureLayout>
-    </>
+    <SculptureLayout title="Neptune" model={<Model />} modelOffset={[0, 4, 0]} descriptionElems={elems} />
   );
 }
 
