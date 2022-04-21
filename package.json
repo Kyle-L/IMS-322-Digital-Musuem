@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx src/",
     "lint-fix": "eslint --ext .js,.jsx src/ --fix",
-    "deploy": "sh scripts/deploy.sh"
+    "deploy": "sh scripts/deploy.sh --purge"
   },
   "browserslist": [
     ">0.2%",
