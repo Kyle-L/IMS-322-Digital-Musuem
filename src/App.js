@@ -1,17 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
 import {
-  Augustus, Diane, Death, Neptune, ThreeGraces,
+  Home, Augustus, Diane, Death, Neptune, ThreeGraces,
 } from './pages';
 import './style.css';
-import Navbar from './components/Navbar';
+import ViewPageLayout from './layouts/ViewPageLayout';
 
 function App() {
   const pages = [
-    {
-      path: '/',
-      component: <Home />,
-    },
     {
       path: '/death',
       component: <Death />,
@@ -36,9 +31,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
-        {pages.map((page) => (<Route key={page.path} path={page.path} element={page.component} />))}
+        <Route path="/" element={<Home />} />
+        {pages.map((page) => (
+          <Route key={page.path} element={<ViewPageLayout />}>
+            <Route path={page.path} element={page.component} />
+          </Route>
+        ))}
       </Routes>
     </BrowserRouter>
   );

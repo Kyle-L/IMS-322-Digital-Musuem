@@ -81,6 +81,7 @@ button:hover {
 }
 
 .canvas {
+  z-index: -100; /* hide canvas behind page elements like the dropdown menu*/
   min-height: min(100vh, 100vw);
 }
 
@@ -260,6 +261,7 @@ ul li {
 }
 
 .sub-menu {
+  z-index: 100;
   position: absolute;
   width: 200px;
   top: 30px;

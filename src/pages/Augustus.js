@@ -1,7 +1,7 @@
 import Model from '../components/models/Augustus';
 import React from 'react';
 import SculptureModal from '../components/animated/SculptureModal';
-import SculptureLayout from '../layouts/SculptureLayout';
+import SculptureLayout from '../templates/SculpturePageTemplate';
 
 function Page() {
 

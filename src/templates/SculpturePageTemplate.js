@@ -7,7 +7,13 @@ import { Suspense, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 
-export default function Viewer({ title, model, descriptionElems, modelOffset, fov = 40 }) {
+/**
+ * A sculpture page template that wraps the content in a container, adds a fade in animation to all elements,
+ * and displays a the sculpture's 3D model.
+ * @param {Object} props - The props passed to the component.
+ * @returns Returns the rendered sculpture page template populated with the content passed to the component.
+ */
+export default function SculpturePageTemplate({ title, model, descriptionElems, modelOffset, fov = 40 }) {
   const { progress } = useProgress();
   const ref = useRef();
 
@@ -62,7 +68,7 @@ export default function Viewer({ title, model, descriptionElems, modelOffset, fo
   );
 }
 
-Viewer.propTypes = {
+SculpturePageTemplate.propTypes = {
   children: PropTypes.any,
   descriptionElems: PropTypes.shape({
     map: PropTypes.func

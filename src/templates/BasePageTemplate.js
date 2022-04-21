@@ -2,7 +2,12 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet";
 import FadeWrapper from "../components/animated/FadeWrapper";
 
-export default function Viewer({ children }) {
+/**
+ * A simple page template that wraps the content in a container and adds a fade in animation.
+ * @param {Object} props - The props passed to the component.
+ * @returns The rendered page template populated with the content passed to the component.
+ */
+export default function BasePageTemplate({ children }) {
   return (
     <>
       <Helmet>
@@ -19,6 +24,6 @@ export default function Viewer({ children }) {
   );
 }
 
-Viewer.propTypes = {
+BasePageTemplate.propTypes = {
   children: PropTypes.any
 }
