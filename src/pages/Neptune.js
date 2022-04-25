@@ -17,7 +17,7 @@ function Page() {
     </p>),
     (<p key={3}>
         Like Poseidon, Neptune was worshipped by the Romans also as a god of horses, under the name <TooltipWrapper label={'Before Poseidon was known as the god of the sea, he was connected to the horse and may have originally been depicted in equine form.'}>Neptunus Equester</TooltipWrapper>, a patron of horse-racing. This affiliation of with 
-        Neptune being the god of horses <TooltipWrapper label={'Neptune has no such direct connection with horses, however it was Neptune connection with Poseidon that likely influenced Coysevox.'}>directly influenced Antoine Coysevox&apos;s work</TooltipWrapper>.
+        Neptune being the god of horses directly influenced Antoine Coysevox&apos;s work.
     </p>),
     (<p key={4}>
       The real sculpture currently reside in the Louvre Museum, Department of Sculptures from the Middle Ages, the Renaissance and Modern Times in Paris, France.
