@@ -4,7 +4,7 @@ import {motion} from 'framer-motion';
 
 function LogoIcon() {
     const transition = { duration: 3, ease: 'easeInOut' };
-    const initial = { opacity: 0, pathLength: 0 };
+    const initial = { opacity: 1, pathLength: 0 };
     const animate = { opacity: 1, pathLength: 1 };
 
     return (

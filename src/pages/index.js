@@ -1,15 +1,20 @@
-import Augustus from './Augustus';
+import Caesar from './Caesar';
 import Death from './Death';
-import Diane from './Diane';
+import Arria from './Arria';
 import Neptune from './Neptune';
 import ThreeGraces from './ThreeGraces';
+import Hercule from './Hercule';
 import Home from './Home';
+import Louis from './Louis';
+
 
 export {
   Home,
-  Augustus,
+  Caesar,
   Death,
-  Diane,
+  Arria,
   Neptune,
   ThreeGraces,
+  Hercule,
+  Louis,
 };

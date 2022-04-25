@@ -72,6 +72,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding: 0 1ch 0 1ch;
 }
 
 /* Page */
@@ -81,7 +82,6 @@ button:hover {
 }
 
 .canvas {
-  z-index: -100; /* hide canvas behind page elements like the dropdown menu*/
   min-height: min(100vh, 100vw);
 }
 
@@ -201,7 +201,7 @@ ul li {
 /* End footer styles */
 
 .li {
-  padding: 1rem;
+  padding: 0 1rem 0 1rem;
   display: inline-block;
   vertical-align: middle;
 }
@@ -347,7 +347,7 @@ ul li {
 /* Responsive styles */
 @media screen and (max-width: 920px) {
   .nav {
-    width: 75%;
+    width: 100%;
     flex-direction: column;
   }
 

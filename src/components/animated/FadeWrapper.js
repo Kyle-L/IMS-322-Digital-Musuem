@@ -14,7 +14,7 @@ export default function Fade({ children, active = true, includeLoader = false })
   }, [active]);
 
   return (
-    <div style={{ position: 'relative', height: '100%', width: '100%' }}>
+    <>
       {includeLoader && !isActive && (<LoadingIcon />)}
       {isActive && (
         <AnimatePresence>
@@ -23,13 +23,12 @@ export default function Fade({ children, active = true, includeLoader = false })
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1, ease: 'easeInOut' }}
-            style={{ position: 'relative', height: '100%', width: '100%' }}
           >
             {children}
           </motion.div>
         </AnimatePresence>
       )}
-    </div>
+    </>
 
   );
 }

@@ -6,8 +6,8 @@ source: https://sketchfab.com/3d-models/hercule-f0b0158e3fc04f99927d8ac934589de1
 title: Hercule
 */
 
-import { useGLTF } from '@react-three/drei';
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 import hercule from './binary/hercule.glb';
 
 export default function Model(props) {
@@ -45,4 +45,4 @@ export default function Model(props) {
   );
 }
 
-useGLTF.preload('/hercule.glb');
+useGLTF.preload("/hercule.glb");

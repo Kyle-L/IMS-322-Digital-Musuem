@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet";
-import FadeWrapper from "../components/animated/FadeWrapper";
+import Fade from "../components/animated/FadeWrapper";
 
 /**
  * A simple page template that wraps the content in a container and adds a fade in animation.
@@ -13,12 +13,10 @@ export default function BasePageTemplate({ children }) {
       <Helmet>
         <title>Digital Museum</title>
       </Helmet>
-      <div className="container row h-100">
-        <div className="col">
-          <FadeWrapper active>
-            {children}
-          </FadeWrapper>
-        </div>
+      <div className="container">
+        <Fade>
+          {children}
+        </Fade>
       </div>
     </>
   );

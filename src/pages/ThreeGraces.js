@@ -7,28 +7,25 @@ function Page() {
 
   const elems = [
     (<h1 key={0}>The Three Graces</h1>),
-    (<SculptureModal key={1} name="The Three Graces" artist=" Antonio Canova" date="1703 - 1705 (signing)" held="Louvre Museum in Paris, France" heldLink="https://collections.louvre.fr/en/" moreInfo='https://collections.louvre.fr/en/ark:/53355/cl010094811' origin="Marlay, France" />),
+    (<SculptureModal key={1} name="The Three Graces" artist="Antonio Canova" date="1814 - 1817" held="Hermitage Museum in Saint Petersburg, Russia" heldLink="https://thehermitagemuseum.org/" moreInfo='https://en.wikipedia.org/wiki/The_Three_Graces_(sculpture)' origin="Bedfordshire, England" />),
     (<p key={2}>
-      Antonio Canova’s statue The Three Graces is a Neoclassical sculpture, in marble, of the mythological three Charites. The 
-      charities are daughters of Zeus – identified on some engravings of the statue as, from left to right, Euphrosyne, Aglaea and Thalia – who 
-      were said to represent youth/beauty (Thalia), mirth (Euphrosyne), and elegance (Aglaea). The Graces presided over banquets 
-      and gatherings, to delight the guests of the gods. As such they have served as subjects for historical artists including 
+      Antonio Canova&apos;s statue <i>The Three Graces</i> in marble depicts the mythological three Charites. The 
+      charities are daughters of Zeus. They are identified on some engravings of the statue as, from left to right, Euphrosyne, Aglaea and Thalia.
+      They were said to were said to represent youth/beauty (Thalia), mirth (Euphrosyne), and elegance (Aglaea).
+      </p>),
+    (<p key={3}>
+      The Graces presided over banquets and gatherings, to delight the guests of the gods. As such they have served as subjects for historical artists including 
       Sandro Botticelli and Bertel Thorvaldsen. A version of the sculpture is in the Hermitage Museum, and another is owned 
       jointly and exhibited in turn by the Victoria and Albert Museum and the Scottish National Gallery.
     </p>),
-    (<p key={3}>
-        Depictions of Neptune in Roman mosaics, especially those of North Africa, are influenced by Hellenistic conventions.
-        Neptune was likely associated with fresh water springs before the sea. Like Poseidon, Neptune was worshipped by the
-        Romans also as a god of horses, under the name Neptunus Equester, a patron of horse-racing. This affiliation of with 
-        Neptune being the god of horses directly influenced Antoine Coysevox&apos;s work here.
-    </p>),
     (<p key={4}>
-      The real sculpture currently reside in the Louvre Museum, Department of Sculptures from the Middle Ages, the Renaissance and Modern Times in Paris, France.
+      Multiple versions of the statue exist in different locations in the world. The orginal statue is currently in the Hermitage Museum in Saint Petersburg, Russia
+      where it was brought shortly after being brought there by the son of John Russell, the 6th Duke of Bedford, the original man who comissioned it.
     </p>),
   ]
 
   return (
-    <SculptureLayout title="Neptune" model={<Model />} modelOffset={[0, 18, 0]} fov={30} descriptionElems={elems} />
+    <SculptureLayout title="The Three Graces" model={<Model />} modelOffset={[0, 18, 0]} fov={30} descriptionElems={elems} />
   );
 }
 

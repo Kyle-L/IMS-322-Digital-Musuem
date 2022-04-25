@@ -20,7 +20,7 @@ function SculptureModal({ name, date, origin, artist, held, heldLink, moreInfo =
         <p>Place of origin: {origin}</p>
         <p>Artist: {artist}</p>
         <p>Held by: <a href={heldLink} target="_blank" rel="noreferrer">{held}</a></p>
-        {moreInfo && <p>More info: <a href={moreInfo} target="_blank" rel="noreferrer">{moreInfo}</a></p>}
+        {moreInfo && <p style={{whiteSpace: 'nowrap', overflow: 'hidden'}}>More info: <a href={moreInfo} target="_blank" rel="noreferrer">{moreInfo}</a></p>}
       </Modal>
     </>
   );

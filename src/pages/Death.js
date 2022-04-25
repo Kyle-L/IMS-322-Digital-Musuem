@@ -9,7 +9,7 @@ function Page() {
     (<h1 key={0}>Death and the Mother</h1>),
     (<SculptureModal key={1} name="Death and the Mother" artist="Niels Hansen Jacobsen" date="1892" held="Danish National Gallery in Copenhagen, Denmark" heldLink="https://www.smk.dk/en/" moreInfo='https://en.wikipedia.org/wiki/Death_and_the_Mother' origin="Paris, France" />),
     (<p key={2}>
-      Death and the Mother is a sculpture created by the Danish sculptor Niels Hansen Jacobsen.
+      <i>Death and the Mother</i> is a sculpture created by the Danish sculptor Niels Hansen Jacobsen.
       Inspired by Hans Christian Andersen&apos;s tale <i>The Story of a Mother</i>, it depicts a Grim Reaper figure, in a dynamic pose,
       carrying a scythe, striding over a mother with a dead child crouching on the ground. Jacobsen created the model in 1892
       shortly after arriving in Paris, France where he lived until 1902.
