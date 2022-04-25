@@ -5,6 +5,8 @@ import LoadingIcon from './LoadingIcon';
 
 /**
  * A wrapper component that fades everything wrapped. Includes optional loading icon.
+ * @param {Object} props - The props passed to the component.
+ * @returns The rendered modal.
  */
 export default function Fade({ children, active = true, includeLoader = false }) {
   const [isActive, setIsActive] = useState(false);

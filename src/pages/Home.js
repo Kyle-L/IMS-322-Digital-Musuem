@@ -3,7 +3,7 @@ import BasePageTemplate from '../templates/BasePageTemplate';
 
 function Home() {
   return (
-    <BasePageTemplate>
+    <BasePageTemplate title={'Home'}>
       <div className='row'>
         <div className='col'>
           <h1>Welcome!</h1>

@@ -1,7 +1,10 @@
 import PropTypes from "prop-types"
 import {motion} from 'framer-motion';
 
-
+/**
+ * An animated logo icon.
+ * @returns {JSX.Element} The rendered component.
+ */
 function LogoIcon() {
     const transition = { duration: 3, ease: 'easeInOut' };
     const initial = { opacity: 1, pathLength: 0 };

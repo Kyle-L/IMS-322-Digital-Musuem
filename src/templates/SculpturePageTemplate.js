@@ -37,7 +37,8 @@ export default function SculpturePageTemplate({ title, model, descriptionElems, 
   return (
     <>
       <Helmet>
-        <title>{title} | Digital Museum</title>
+        {title && <title>{title} | Digital Museum</title>}
+        {!title && <title>Digital Museum</title>}
       </Helmet>
       <div className='container'>
         <div className='row'>

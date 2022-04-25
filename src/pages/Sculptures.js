@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 
 function Sculptures() {
   return (
-    <BasePageTemplate>
+    <BasePageTemplate title={'Sculptures'}>
       <div className='row'>
         <div className='col'>
           <NavLink to='/sculpture/arria'><SculptureImage title='Arria et Poetus' image={arria} alt='Arria et Poetus' /></NavLink>

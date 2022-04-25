@@ -2,6 +2,11 @@ import PropTypes from "prop-types"
 import { motion, useAnimation } from "framer-motion";
 import * as React from "react";
 
+/**
+ * An image that animates when it is hovered over.
+ * @param {Object} props - The props passed to the component.
+ * @returns The rendered modal.
+ */
 const SculptureImage = ({ title, image, alt }) => {
     const backgroundControl = useAnimation();
     const imageControl = useAnimation();

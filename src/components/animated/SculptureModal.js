@@ -4,6 +4,8 @@ import Modal from './Modal';
 
 /**
  * A modal that includes a layout for a scultpure's information.
+ * @param {Object} props - The props passed to the component.
+ * @returns The rendered modal.
  */
 function SculptureModal({ name, date, origin, artist, held, heldLink, moreInfo = '' }) {
   const [modalVisible, modalSetVisible] = useState(false);

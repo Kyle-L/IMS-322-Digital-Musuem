@@ -7,11 +7,12 @@ import Fade from "../components/animated/FadeWrapper";
  * @param {Object} props - The props passed to the component.
  * @returns The rendered page template populated with the content passed to the component.
  */
-export default function BasePageTemplate({ children }) {
+export default function BasePageTemplate({ children, title }) {
   return (
     <>
       <Helmet>
-        <title>Digital Museum</title>
+        {title && <title>{title} | Digital Museum</title>}
+        {!title && <title>Digital Museum</title>}
       </Helmet>
       <div className="container">
         <Fade>
@@ -23,5 +24,6 @@ export default function BasePageTemplate({ children }) {
 }
 
 BasePageTemplate.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
+  title: PropTypes.any
 }

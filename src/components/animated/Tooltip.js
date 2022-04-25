@@ -2,6 +2,11 @@ import { motion, useAnimation } from "framer-motion";
 import PropTypes from "prop-types";
 import React from "react";
 
+/**
+ * A tooltip that animates when hovering over a child element.
+ * @param {Object} props - The props passed to the component.
+ * @returns The rendered modal.
+ */
 export default function TooltipWrapper({ children, label }) {
     const toolTipControl = useAnimation();
 

@@ -7,6 +7,10 @@ const spinTransition = {
   duration: 1,
 };
 
+/**
+ * A component that animates a loading icon.
+ * @returns {JSX.Element} The rendered component.
+ */
 export default function CircleLoader() {
   return (
     <div className="loader-container">

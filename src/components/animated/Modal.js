@@ -5,6 +5,8 @@ import React from 'react';
 /**
  * A simple modal with a modalVisible and a modalSetVisible prop to control the visibility through
  * the useState hook.
+ * @param {Object} props - The props passed to the component.
+ * @returns The rendered modal.
  */
 function Modal({ children, modalVisible, modalSetVisible }) {
   return (
