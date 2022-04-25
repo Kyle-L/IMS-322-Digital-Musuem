@@ -5,9 +5,6 @@ import { NavLink } from 'react-router-dom';
 
 export default function Dropdown({ title, links }) {
     const [isMouse, toggleMouse] = React.useState(false);
-    const toggleMouseMenu = () => {
-        toggleMouse(!isMouse);
-    };
 
     const subMenuAnimate = {
         enter: {
@@ -31,11 +28,11 @@ export default function Dropdown({ title, links }) {
         }
     };
     return (
-        <div className="flex-item">
+        <>
             <motion.div
                 className="menu-item"
-                onMouseEnter={toggleMouseMenu}
-                onMouseLeave={toggleMouseMenu}
+                onHoverStart={() => {toggleMouse(true)}}
+                onHoverEnd={() => {toggleMouse(false)}}
             >
                 <p className="link">{title}</p>
                 <motion.div
@@ -53,7 +50,7 @@ export default function Dropdown({ title, links }) {
                     </div>
                 </motion.div>
             </motion.div>
-        </div>
+        </>
     );
 }
 

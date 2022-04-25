@@ -6,6 +6,7 @@ function Home() {
       <div className='row'>
         <div className='col'>
           <h1>Welcome!</h1>
+          <button className="btn tooltip" data-tooltip="top" role="tooltip" aria-label="Esse é um tooltips top desenvolvido com css">Top</button>
           <p>
             Welcome to the Digital Museum! The digital museum is a collection of sculptures that can be viewed and explored in 3 dimensions.
           </p>

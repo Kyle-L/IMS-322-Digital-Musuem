@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Quicksand:wght@400&display=swap");
-
 :root {
-  --heading-font: 'libre baskerville', serif;
-  --body-font: 'Quicksand', sans-serif;
+  --heading-font: 'Quicksand', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
 
   --primary-background-color: #fafafa;
 
@@ -283,17 +281,6 @@ ul li {
   color: var(--primary-background-color);
 }
 
-.sub-menu-background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform-origin: 0 0;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
 .sub-menu-container {
   text-align: left;
 }
@@ -304,34 +291,69 @@ ul li {
 /* Nav */
 
 /* Start tooltip */
-.tooltip-background {
-  background-color: var(--primary-accent-color);
-  color: var(--primary-background-color);
-  padding: 0.5rem;
-  border-radius: var(--border-radius);
-  position: absolute;
-  z-index: 102;
-  display: none;
-}
-
-.tooltip-content {
-  display: inline-block;
-  padding: 0.5rem;
-  border-radius: var(--border-radius);
-  position: absolute;
-  z-index: 102;
-  display: none;
-}
-
-.loader-container {
+.tooltip {
   position: relative;
-  width: 100%;
-  height: 50%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-decoration: none;
 }
+
+.tooltip::before{
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.tooltip:hover::before{
+  content: attr(aria-label);
+  background-color: #222;
+  
+  border-radius: 4px;
+  text-shadow: 0 0 5px #000;
+  white-space: nowrap;
+  color: #fff;
+  opacity: 1;
+  pointer-events: all;
+  padding: 6px 12px;
+  overflow: hidden;
+  top: unset;
+}
+
+.tooltip::after{
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+}
+
+.tooltip:hover::after{
+  z-index: 100;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.tooltip:is([data-tooltip="top"])::before{
+  bottom: 100%;
+  left: 0%;
+  margin-bottom: 16px;
+}
+
+/* Arrow */
+.tooltip:is([data-tooltip="top"])::after{
+  bottom: 100%;
+  left: 20%;
+  margin-bottom: 8px;
+
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 0; 
+  height: 0; 
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #222;
+}
+/* End tooltip */
 
 .loader {
   display: block;
