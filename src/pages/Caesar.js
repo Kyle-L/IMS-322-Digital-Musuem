@@ -17,7 +17,7 @@ function Page() {
     </p>),
     (<p key={3}>
       The sculpture is most recognized by many visitors of the Lourve Museum in Paris, France as a marbel sculpture in the Garden of
-      Tuileries, the most oldest square in Paris. However, this is only a moulding of the sculpture, and the sculpture is resides
+      Tuileries, the oldest square in Paris. However, this is only a moulding of the sculpture, and the sculpture is resides
       in the private archives of the Louvre Museum.
     </p>),
   ]

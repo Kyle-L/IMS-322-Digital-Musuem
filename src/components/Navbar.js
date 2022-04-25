@@ -10,12 +10,12 @@ function Navbar() {
           <ul className="list">
             <li className="li">
               <NavLink className="link" to="/">
-                Home
+                Sculptures
               </NavLink>
             </li>
             <li className="li">
-              <NavLink className="link" to="/sculptures">
-                Sculptures
+              <NavLink className="link" to="/about">
+                About
               </NavLink>
             </li>
           </ul>
