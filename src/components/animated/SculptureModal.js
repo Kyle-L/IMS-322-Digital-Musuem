@@ -10,7 +10,7 @@ function SculptureModal({ name, date, origin, artist, held, heldLink, moreInfo =
 
   return (
     <>
-      <button className="w-100" onClick={() => modalSetVisible(true)}>
+      <button className="btn w-100" onClick={() => modalSetVisible(true)}>
         Sculpture Details
       </button>
       <Modal modalVisible={modalVisible} modalSetVisible={modalSetVisible}>

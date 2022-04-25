@@ -17,7 +17,7 @@ function Home() {
           The digital museum solves that problem by allowing you to view the sculpture in 3D. While a picture speaks a 1000 words, a 3d models speaks quite a few more in this case!
           </p>
           <p>Take a moment to explore some of the exhibits!</p>
-          <NavLink to='/sculptures'>Explore the Sculptures</NavLink>
+          <NavLink className='btn w-100' to='/sculptures'>Explore Sculptures</NavLink>
         </div>
       </div>
     </BasePageTemplate>

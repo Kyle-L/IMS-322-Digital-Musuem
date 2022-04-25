@@ -43,20 +43,6 @@ a {
 a:hover {
   color: var(--secondary-accent-color);
 }
-
-button {
-  border-radius: var(--border-radius);
-  padding: 1ch;
-  background-color: var(--primary-accent-color);
-  color: var(--primary-background-color);
-  border: none;
-}
-
-button:hover {
-  background-color: var(--secondary-accent-color);
-  cursor: pointer;
-}
-
 /* Flex Layout */
 
 .row {
@@ -102,6 +88,22 @@ button:hover {
   .container {
     width: 100%;
   }
+}
+
+.btn {
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  padding: 1ch;
+  background-color: var(--primary-accent-color);
+  color: var(--primary-background-color);
+  text-align: center;
+  border: none;
+}
+
+.btn:hover {
+  color: var(--primary-background-color);
+  background-color: var(--secondary-accent-color);
+  cursor: pointer;
 }
 
 .h-100 {
@@ -378,10 +380,6 @@ ul li {
 
   .row {
     flex-direction: column;
-  }
-
-  .col {
-    /* margin: 1rem 0 1rem 0; */
   }
 
   .col.canvas-container {

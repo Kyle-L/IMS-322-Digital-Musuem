@@ -13,9 +13,6 @@ export default function TooltipWrapper({ children, label }) {
             display: 'inline-block',
             x: 0,
             y: '-0.5rem',
-            transition: {
-                duration: 0.2
-            }
         });
     }
 
