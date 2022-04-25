@@ -6,6 +6,7 @@ import ThreeGraces from './ThreeGraces';
 import Hercule from './Hercule';
 import Home from './Home';
 import Louis from './Louis';
+import Sculptures from './Sculptures';
 
 
 export {
@@ -17,4 +18,5 @@ export {
   ThreeGraces,
   Hercule,
   Louis,
+  Sculptures
 };

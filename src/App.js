@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ViewPageLayout from './layouts/ViewPageLayout';
-import { Arria, Caesar, Death, Hercule, Home, Louis, Neptune, ThreeGraces } from './pages';
+import { Arria, Caesar, Death, Hercule, Home, Louis, Neptune, Sculptures, ThreeGraces } from './pages';
 import './style.css';
 
 function App() {
@@ -10,31 +10,35 @@ function App() {
       component: <Home />,
     },
     {
-      path: '/arria',
+      path: '/sculptures',
+      component: <Sculptures />
+    },
+    {
+      path: '/sculpture/arria',
       component: <Arria />,
     },
     {
-      path: '/caesar',
+      path: '/sculpture/caesar',
       component: <Caesar />,
     },
     {
-      path: '/death',
+      path: '/sculpture/death',
       component: <Death />,
     },
     {
-      path: '/hercule',
+      path: '/sculpture/hercule',
       component: <Hercule />,
     },
     {
-      path: '/louis-xiv',
+      path: '/sculpture/louis-xiv',
       component: <Louis />,
     },
     {
-      path: '/neptune',
+      path: '/sculpture/neptune',
       component: <Neptune />,
     },
     {
-      path: '/three-graces',
+      path: '/sculpture/three-graces',
       component: <ThreeGraces />,
     },
   ];

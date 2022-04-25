@@ -6,6 +6,14 @@ import { NavLink } from 'react-router-dom';
 export default function Dropdown({ title, links }) {
     const [isMouse, toggleMouse] = React.useState(false);
 
+    const handleMouseEnter = () => {
+        toggleMouse(true);
+    };
+
+    const handleMouseLeave = () => {
+        toggleMouse(false);
+    };
+
     const subMenuAnimate = {
         enter: {
             opacity: 1,
@@ -31,8 +39,8 @@ export default function Dropdown({ title, links }) {
         <>
             <motion.div
                 className="menu-item"
-                onHoverStart={() => {toggleMouse(true)}}
-                onHoverEnd={() => {toggleMouse(false)}}
+                onHoverStart={handleMouseEnter}
+                onHoverEnd={handleMouseLeave}
             >
                 <p className="link">{title}</p>
                 <motion.div

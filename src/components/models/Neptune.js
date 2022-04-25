@@ -8,7 +8,7 @@ title: Neptune - Louvre Museum
 
 import { useGLTF } from '@react-three/drei';
 import React, { useRef } from 'react';
-import neptune from './binary/neptune.glb';
+import neptune from '../../assets/models/neptune.glb';
 
 export default function Model(props) {
   const group = useRef();

@@ -8,7 +8,7 @@ title: The Three Graces
 
 import { useGLTF } from '@react-three/drei';
 import React, { useRef } from 'react';
-import graces from './binary/three-graces.glb';
+import graces from '../../assets/models/three-graces.glb';
 
 export default function Model(props) {
   const group = useRef();

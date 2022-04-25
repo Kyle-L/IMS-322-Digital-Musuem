@@ -8,7 +8,7 @@ title: Arria et Pætus - Louvre Museum
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import arria from './binary/arria-et-ptus.glb';
+import arria from '../../assets/models/arria-et-ptus.glb';
 
 export default function Model(props) {
   const group = useRef();

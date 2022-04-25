@@ -8,7 +8,7 @@ title: Hercule
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import hercule from './binary/hercule.glb';
+import hercule from '../../assets/models/hercule.glb';
 
 export default function Model(props) {
   const group = useRef();

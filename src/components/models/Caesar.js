@@ -8,7 +8,7 @@ title: César - Louvre Museum
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import caesar from './binary/caesar.glb';
+import caesar from '../../assets/models/caesar.glb';
 
 export default function Model(props) {
   const group = useRef();

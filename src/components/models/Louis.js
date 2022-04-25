@@ -8,7 +8,7 @@ title: Louis XIV de France, Louvre, Paris
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-import louis from './binary/louis-xiv.glb';
+import louis from '../../assets/models/louis-xiv.glb';
 
 export default function Model(props) {
   const group = useRef();

@@ -8,7 +8,7 @@ title: The death and the mother
 
 import { useGLTF } from '@react-three/drei';
 import React, { useRef } from 'react';
-import death from './binary/death.glb';
+import death from '../../assets/models/death.glb';
 
 export default function Model(props) {
   const group = useRef();
