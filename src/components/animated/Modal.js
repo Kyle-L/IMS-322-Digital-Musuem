@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from "prop-types";
-import React, { useEffect } from 'react';
+import React from 'react';
 
 /**
  * A simple modal with a modalVisible and a modalSetVisible prop to control the visibility through
@@ -9,15 +9,6 @@ import React, { useEffect } from 'react';
  * @returns The rendered modal.
  */
 function Modal({ children, modalVisible, modalSetVisible }) {
-
-  useEffect(() => {
-    if (modalVisible) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  }, [modalVisible]);
-
   return (
     modalVisible && (
     <AnimatePresence>
