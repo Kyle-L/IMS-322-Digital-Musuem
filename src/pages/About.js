@@ -3,7 +3,7 @@ import BasePageTemplate from '../templates/BasePageTemplate';
 function Sculptures() {
     return (
         <BasePageTemplate title={'About'}>
-            <div className="row col"><h1>About</h1></div>
+            <div className="row col"><h1 className='heading'>About</h1></div>
             <div className="row">
                 <div className="col">
                     <p>Admittedly, this project has a few things going that might be surprisingly interesting. 
@@ -15,7 +15,7 @@ function Sculptures() {
                     </p>
                 </div>
             </div>
-            <div className="row col"><h1>The Tech Stack</h1></div>
+            <div className="row col"><h1 className='heading'>The Tech Stack</h1></div>
             <div className="row">
                 <div className="col">
                     <p>The site makes use of all of the following tools.</p>

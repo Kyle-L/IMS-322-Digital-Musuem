@@ -7,7 +7,7 @@ import SculptureLayout from '../templates/SculpturePageTemplate';
 function Page() {
 
   const elems = [
-    (<h1 key={0}>Hercule</h1>),
+    (<h1 className='heading' key={0}>Hercule</h1>),
     (<SculptureModal key={1} name="Hercule" artist="Gilles-Lambert Godecharle" date="1801" held="Royal Musuems of Fine Arts of Belgium" heldLink="https://www.fine-arts-museum.be/fr/open-museum" moreInfo='https://www.fine-arts-museum.be/fr/la-collection/gilles-lambert-godecharle-hercule' origin="Marlay, France" />),
     (<p key={2}>
         Held by the Royal Musuems of Fine Arts of Belgium, <i>Hercule</i> is a sculpture of <TooltipWrapper label={'Hercules is a multifaceted figure with contradictory characteristics, which enabled later artists and writers to pick and choose how to represent him.'}>Hercules</TooltipWrapper>, the god of war and the hero of ancient Rome. 

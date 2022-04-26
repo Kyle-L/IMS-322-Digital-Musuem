@@ -7,7 +7,7 @@ import SculptureLayout from '../templates/SculpturePageTemplate';
 function Page() {
 
   const elems = [
-    (<h1 key={0}>The Three Graces</h1>),
+    (<h1 className='heading' key={0}>The Three Graces</h1>),
     (<SculptureModal key={1} name="The Three Graces" artist="Antonio Canova" date="1814 - 1817" held="Hermitage Museum in Saint Petersburg, Russia" heldLink="https://thehermitagemuseum.org/" moreInfo='https://en.wikipedia.org/wiki/The_Three_Graces_(sculpture)' origin="Bedfordshire, England" />),
     (<p key={2}>
       Antonio Canova&apos;s statue <i>The Three Graces</i> in marble depicts the mythological three <TooltipWrapper label={'In Greek mythology, the Charites, singular Charis, or Graces, were three or more goddesses of charm, beauty, nature, human creativity, goodwill, and fertility. The Charities are often some of the most frequently depicted characters in Greek mythology.'}>Charities</TooltipWrapper>. The 

@@ -7,7 +7,7 @@ import TooltipWrapper from '../components/animated/Tooltip';
 function Page() {
 
   const elems = [
-    (<h1 key={0}>Julius Caesar</h1>),
+    (<h1 className='heading' key={0}>Julius Caesar</h1>),
     (<SculptureModal key={1} name="Julius Caesar" artist="Nicolas Coustou" date="1696 - 1722" held="Louvre Museum in Paris, France" heldLink="https://collections.louvre.fr/en/" moreInfo='https://collections.louvre.fr/en/ark:/53355/cl010091988' origin="Lyon, France" />),
     (<p key={2}>
       <i>Julius Caesar</i> (French: Jules César), is a sculpture by French sculptor Nicolas Coustou comissioned by <TooltipWrapper label={'Louis XIV was King of France from 1643 until his death in 1715. His reign of 72 years is the longest recorded of any monarch of a sovereign country in history; much of which he is considered to have focused on fine arts over politics.'}>King Louis XIV</TooltipWrapper> in 1696.

@@ -7,7 +7,7 @@ import TooltipWrapper from '../components/animated/Tooltip';
 function Page() {
 
   const elems = [
-    (<h1 key={0}>Equestrian Statue of King Louis XIV</h1>),
+    (<h1 className='heading' key={0}>Equestrian Statue of King Louis XIV</h1>),
     (<SculptureModal key={1} name="Louis XIV" artist="Gian Lorenzo Bernini" date="1665 - 1684" held="The Palace of Versailles in Versailles, France" heldLink="https://en.chateauversailles.fr/" moreInfo='https://en.wikipedia.org/wiki/Equestrian_statue_of_Louis_XIV_(Bernini)' origin="Rome, Italy" />),
     (<p key={2}>
       <i>The Equestrian Statue of King Louis XIV</i> is a sculpture designed and partially executed by the Italian artist <TooltipWrapper label={'Gian Lorenzo Bernini was an Italian sculptor and architect. While a major figure in the world of architecture, he was more prominently the leading sculptor of his age, credited with creating the Baroque style of sculpture.'}>Gian Lorenzo Bernini</TooltipWrapper> and comissioned by the Louis XIV. Bernini first discussed the project while in France in the mid-1660s, but it did not start until later in the decade, when back in Rome. 

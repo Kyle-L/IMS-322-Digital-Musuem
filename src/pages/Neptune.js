@@ -7,7 +7,7 @@ import SculptureLayout from '../templates/SculpturePageTemplate';
 function Page() {
 
   const elems = [
-    (<h1 key={0}>Neptune</h1>),
+    (<h1 className='heading' key={0}>Neptune</h1>),
     (<SculptureModal key={1} name="Neptune" artist="Antoine Coysevox" date="1703 - 1705 (signing)" held="Louvre Museum in Paris, France" heldLink="https://collections.louvre.fr/en/" moreInfo='https://collections.louvre.fr/en/ark:/53355/cl010094811' origin="Marlay, France" />),
     (<p key={2}>
       This marble sculpture of Neptune was carved by the french artist Antoine Coysevox. Neptune was the god of freshwater and the sea in

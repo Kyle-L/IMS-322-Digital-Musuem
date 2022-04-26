@@ -7,7 +7,7 @@ import SculptureLayout from '../templates/SculpturePageTemplate';
 function Page() {
 
   const elems = [
-    (<h1 key={0}>Death and the Mother</h1>),
+    (<h1 className='heading' key={0}>Death and the Mother</h1>),
     (<SculptureModal key={1} name="Death and the Mother" artist="Niels Hansen Jacobsen" date="1892" held="Danish National Gallery in Copenhagen, Denmark" heldLink="https://www.smk.dk/en/" moreInfo='https://en.wikipedia.org/wiki/Death_and_the_Mother' origin="Paris, France" />),
     (<p key={2}>
       <i>Death and the Mother</i> is a sculpture created by the Danish sculptor Niels Hansen Jacobsen.
