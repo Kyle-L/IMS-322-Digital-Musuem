@@ -4,7 +4,6 @@ import Arria from './Arria';
 import Neptune from './Neptune';
 import ThreeGraces from './ThreeGraces';
 import Hercule from './Hercule';
-import Home from './Home';
 import Louis from './Louis';
 import Sculptures from './Sculptures';
 import About from './About';
@@ -12,7 +11,6 @@ import About from './About';
 
 export {
   About,
-  Home,
   Caesar,
   Death,
   Arria,
