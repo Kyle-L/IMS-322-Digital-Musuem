@@ -16,8 +16,10 @@ function Sculptures() {
       <div key={1} className="row">
         <div className="col">
           <p>
-            Welcome to the Digital Museum! The digital museum is a collection of sculptures that can be viewed and explored in 3 dimensions. Often, the problem of viewing a sculpture is that it is difficult to see the details of the it through just a picture.
-            The digital museum solves that problem by allowing you to view the sculpture in 3D. While a picture speaks a 1000 words, a 3D model speaks quite a few more in this case! Take a moment to explore some of the sculptures!
+            Welcome to the Digital Museum! The digital museum is a collection of sculptures that can be viewed and explored in 3 dimensions. 
+            Often, the problem of viewing a sculpture is that it is difficult to see the details of the sculpture through just a picture.
+            The digital museum solves that problem by allowing you to view the sculpture in 3D. If a picture speaks a 1000 words, 
+            a 3D model speaks quite a few more! Take a moment to explore some of the sculptures!
           </p>
         </div>
       </div>
