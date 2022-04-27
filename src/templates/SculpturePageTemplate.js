@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Stage, useProgress } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import FadeWrapper from '../components/animated/FadeWrapper';
+import SculptureCanvasWrapper from '../components/animated/SculptureCanvasWrapper';
 import ModelWrapper from '../components/ModelWrapper';
 import { Suspense, useRef } from 'react';
 import { Helmet } from 'react-helmet';
@@ -42,8 +42,7 @@ export default function SculpturePageTemplate({ title, model, descriptionElems, 
       </Helmet>
       <div className='container'>
         <div className='row'>
-          <div className='col canvas-container'>
-            <FadeWrapper active={progress == 100} includeLoader>
+            <SculptureCanvasWrapper active={progress == 100} includeLoader>
               <Canvas className='canvas' shadows camera={{ fov }}>
                 <Suspense>
                   <Stage controls={ref} preset='rembrandt' intensity={0}>
@@ -53,9 +52,8 @@ export default function SculpturePageTemplate({ title, model, descriptionElems, 
                   </Stage>
                 </Suspense>
               </Canvas>
-            </FadeWrapper>
-          </div>
-          <div className='col p-2'>
+            </SculptureCanvasWrapper>
+          <div className='col'>
             {descriptionElems.map((elem, i) => (
               <motion.div key={i} initial={initial} animate={animate} transition={{ delay: (i + 1) * delayRate, ...transition }}>
                 {elem}

@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom';
 
 function Sculptures() {
   const elems = [
-    (<div key={0} className="row col"><h1 className='heading'>Welcome!</h1></div>),
+    (<div key={0} className="row"><div className="col"><h1 className='heading'>Welcome!</h1></div></div>),
     (
       <div key={1} className="row">
         <div className="col">
@@ -25,7 +25,7 @@ function Sculptures() {
       </div>
     ),
     (<hr key={2} />),
-    (<div key={3} className="row col"><h1 className='heading'>Explore Sculptures!</h1></div>),
+    (<div key={0} className="row"><div className="col"><h1 className='heading'>Explore Sculptures!</h1></div></div>),
     (
       <>
         <div key={4} className='row'>

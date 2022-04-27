@@ -64,6 +64,7 @@ a:hover {
 
 .col.canvas-container {
   max-width: 50%;
+  min-height: min(100vh, 100vw);
 }
 
 .canvas {
@@ -87,7 +88,7 @@ a:hover {
 
 @media (max-width: 768px) {
   .container {
-    width: 100%;
+    padding: 0.5rem;
   }
 }
 
@@ -120,10 +121,6 @@ a:hover {
 
 .w-100 {
   width: 100%;
-}
-
-.p-2 {
-  padding: 2ch;
 }
 
 .accent {
@@ -164,7 +161,7 @@ ul li {
   align-items: center;
 }
 
-.nav .heading {
+.nav .branding {
   font-size: 2rem;
   font-weight: bold;
   font-family: var(--heading-font);
@@ -173,7 +170,7 @@ ul li {
   align-items: center;
 }
 
-.nav .heading .img {
+.nav .branding .img {
   display: inline-block;
   width: 3rem;
   padding: 0.5rem;
@@ -407,6 +404,10 @@ footer {
 
   .row {
     flex-direction: column;
+  }
+
+  .col {
+    padding: 0
   }
 
   .col.canvas-container {

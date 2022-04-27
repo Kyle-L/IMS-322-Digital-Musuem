@@ -1,6 +1,5 @@
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet";
-import Fade from "../components/animated/FadeWrapper";
 import { motion } from "framer-motion";
 
 /**
@@ -32,14 +31,12 @@ export default function BasePageTemplate({ elems, title }) {
         {!title && <title>Digital Museum</title>}
       </Helmet>
       <div className="container">
-        <Fade>
           {elems.map((elem, i) => (
             <motion.div key={i} initial={initial} animate={animate} transition={{ delay: (i + 1) * delayRate, ...transition }}>
               {elem}
             </motion.div>
           ))
           }
-        </Fade>
       </div>
     </>
   );

@@ -17,10 +17,11 @@ export default function Fade({ children, active = true, includeLoader = false })
 
   return (
     <>
-      {includeLoader && !isActive && (<LoadingIcon />)}
+      {includeLoader && !isActive && (<div className='col loader-container canvas-container'><LoadingIcon /></div>)}
       {isActive && (
         <AnimatePresence>
           <motion.div
+            className='col canvas-container'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
