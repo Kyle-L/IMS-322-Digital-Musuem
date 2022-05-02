@@ -20,8 +20,8 @@ function Page() {
       jointly and exhibited in turn by the Victoria and Albert Museum and the Scottish National Gallery.
     </p>),
     (<p key={4}>
-      Multiple versions of the statue exist in different locations in the world. The orginal statue is currently in the Hermitage Museum in Saint Petersburg, Russia
-      where it was brought shortly after being brought there by the son of <TooltipWrapper label={'Joséphine Bonaparte, born Marie Josèphe Rose Tascher de La Pagerie, was Empress of the French as the first wife of Emperor Napoleon I.'}>Empress Joséphine of France</TooltipWrapper>, the original woman who comissioned it.
+      Multiple versions of the statue exist in different locations in the world. The orginal statue is in the Hermitage Museum in Saint Petersburg, Russia
+      where it was brought shortly after being moved by the son of <TooltipWrapper label={'Joséphine Bonaparte, born Marie Josèphe Rose Tascher de La Pagerie, was Empress of the French as the first wife of Emperor Napoleon I.'}>Empress Joséphine of France</TooltipWrapper>, the original woman who comissioned it.
     </p>),
   ]
 

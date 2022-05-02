@@ -336,7 +336,7 @@ footer {
   padding: 6px 12px;
   overflow: hidden;
   top: unset;
-  width: 17rem;
+  width: 300px;
 }
 
 .tooltip::after{
@@ -348,16 +348,40 @@ footer {
   pointer-events: all;
 }
 
-.tooltip:is([data-tooltip="top"])::before{
+/* Right */
+.tooltip:is([data-tooltip="right"])::before{
   bottom: 100%;
   left: 0%;
   margin-bottom: 16px;
 }
 
-/* Arrow */
-.tooltip:is([data-tooltip="top"])::after{
+/* Right arrow */
+.tooltip:is([data-tooltip="right"])::after{
   bottom: 100%;
   left: 20%;
+  margin-bottom: 8px;
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 0; 
+  height: 0; 
+
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--primary-accent-color);
+}
+
+/* Left */
+.tooltip:is([data-tooltip="left"])::before{
+  bottom: 100%;
+  right: -20px;
+  margin-bottom: 16px;
+}
+
+/* Left arrow */
+.tooltip:is([data-tooltip="left"])::after{
+  bottom: 100%;
+  left: 0%;
   margin-bottom: 8px;
 
   display: inline-block;

@@ -1,6 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useState } from "react";
 
 /**
  * A tooltip that animates when hovering over a child element.
@@ -8,11 +8,24 @@ import React from "react";
  * @returns The rendered modal.
  */
 export default function TooltipWrapper({ children, label }) {
+    // The animation API controls.
     const toolTipControl = useAnimation();
 
-    toolTipControl.initial = { opacity: 0, y: -10 };
+    // Controls the direction of the tooltip.
+    const [direction, setDirection] = useState("right");
+
+    // References to use to calculate the position of the tooltip.
+    const toolTipTextRef = React.createRef();
+    const toolTipRef = React.createRef();
 
     const onHoverStart = () => {
+        if (toolTipTextRef.current.getBoundingClientRect().right + 300 < window.innerWidth) {
+            setDirection("right");
+        } else {
+            setDirection("left");
+        }
+
+        // Animates in the tooltip.
         toolTipControl.start({
             opacity: 1,
             display: 'inline-block',
@@ -22,6 +35,7 @@ export default function TooltipWrapper({ children, label }) {
     }
 
     const onHoverEnd = () => {
+        // Animates out the tooltip.
         toolTipControl.start({
             opacity: 0,
             display: 'none',
@@ -39,14 +53,17 @@ export default function TooltipWrapper({ children, label }) {
             onMouseEnter={onHoverStart}
             onMouseLeave={onHoverEnd}>
             <motion.span
+                ref={toolTipRef}
                 className={'tooltip'}
                 aria-label={label}
-                data-tooltip='top'
-                initial={{ opacity: 0, y: '-4rem', display: 'none' }}
+                data-tooltip={direction}
                 animate={toolTipControl}
+                initial={{ opacity: 0, y: '-4rem', display: 'none' }}
             >
             </motion.span>
-            <span className="tooltip-text">
+            <span 
+            ref={toolTipTextRef}
+            className="tooltip-text">
                 {children}
             </span>
         </span>
