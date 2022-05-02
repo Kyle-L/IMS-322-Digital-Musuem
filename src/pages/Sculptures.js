@@ -7,6 +7,7 @@ import hercule from '../assets/images/hercule.png';
 import louis from '../assets/images/louis.png';
 import neptune from '../assets/images/neptune.png';
 import threeGraces from '../assets/images/three-graces.png';
+import philopoemen from '../assets/images/philopoemen.png';
 import { NavLink } from 'react-router-dom';
 
 function Sculptures() {
@@ -38,6 +39,7 @@ function Sculptures() {
           <div className='col'>
             <NavLink to='/sculpture/louis-xiv'><SculptureImage title='Louis XIV' image={louis} alt='Louis XIV' /></NavLink>
             <NavLink to='/sculpture/neptune'><SculptureImage title='Neptune' image={neptune} alt='Neptune' /></NavLink>
+            <NavLink to='/sculpture/philopoemen'><SculptureImage title='Philopoemen' image={philopoemen} alt='Philopoemen' /></NavLink>
             <NavLink to='/sculpture/three-graces'><SculptureImage title='The Three Graces' image={threeGraces} alt='The Three Graces' /></NavLink>
           </div>
         </div>

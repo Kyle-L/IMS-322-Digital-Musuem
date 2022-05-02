@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import ViewPageLayout from './layouts/ViewPageLayout';
-import { About, Arria, Caesar, Death, Hercule, Louis, Neptune, Sculptures, ThreeGraces } from './pages';
+import { About, Arria, Caesar, Death, Hercule, Louis, Neptune, Philopoemen, Sculptures, ThreeGraces } from './pages';
 import './style.css';
 
 function App() {
@@ -41,17 +42,23 @@ function App() {
       path: '/sculpture/three-graces',
       component: <ThreeGraces />,
     },
+    {
+      path: '/sculpture/philopoemen',
+      component: <Philopoemen />,
+    }
   ];
 
   return (
     <BrowserRouter>
-      <Routes>
-        {pages.map((page) => (
-          <Route key={page.path} element={<ViewPageLayout />}>
-            <Route path={page.path} element={page.component} />
-          </Route>
-        ))}
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          {pages.map((page) => (
+            <Route key={page.path} element={<ViewPageLayout />}>
+              <Route path={page.path} element={page.component} />
+            </Route>
+          ))}
+        </Routes>
+      </ScrollToTop>
     </BrowserRouter>
   );
 }
