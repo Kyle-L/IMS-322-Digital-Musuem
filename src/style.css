@@ -208,6 +208,12 @@ footer {
   padding-left: 2rem;
   font-family: var(--heading-font);
 }
+
+@media screen and (max-width: 920px) {
+  footer {
+    position: relative;
+  }
+}
 /* End footer */
 
 /* Start footer styles */

@@ -1,11 +1,12 @@
-import PropTypes from 'prop-types'
 import { Stage, useProgress } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import SculptureCanvasWrapper from '../components/animated/SculptureCanvasWrapper';
-import ModelWrapper from '../components/ModelWrapper';
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 import { Suspense, useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
+import SculptureCanvasWrapper from '../components/animated/SculptureCanvasWrapper';
+import ModelWrapper from '../components/ModelWrapper';
 
 /**
  * A sculpture page template that wraps the content in a container, adds a fade in animation to all elements,
@@ -42,23 +43,24 @@ export default function SculpturePageTemplate({ title, model, descriptionElems, 
       </Helmet>
       <div className='container'>
         <div className='row'>
-            <SculptureCanvasWrapper active={progress == 100} includeLoader>
-              <Canvas className='canvas' shadows camera={{ fov }}>
-                <Suspense>
-                  <Stage controls={ref} preset='rembrandt' intensity={0}>
-                    <ModelWrapper orbitOffset={modelOffset}>
-                      {model}
-                    </ModelWrapper>
-                  </Stage>
-                </Suspense>
-              </Canvas>
-            </SculptureCanvasWrapper>
+          <SculptureCanvasWrapper active={progress == 100} includeLoader>
+            <Canvas className='canvas' shadows camera={{ fov }}>
+              <Suspense>
+                <Stage controls={ref} preset='rembrandt' intensity={0}>
+                  <ModelWrapper orbitOffset={modelOffset}>
+                    {model}
+                  </ModelWrapper>
+                </Stage>
+              </Suspense>
+            </Canvas>
+          </SculptureCanvasWrapper>
           <div className='col'>
+            <NavLink to='/'>&lt; Back to Sculptures</NavLink>
             {descriptionElems.map((elem, i) => (
               <motion.div key={i} initial={initial} animate={animate} transition={{ delay: (i + 1) * delayRate, ...transition }}>
                 {elem}
-                </motion.div>
-              ))
+              </motion.div>
+            ))
             }
           </div>
         </div>
